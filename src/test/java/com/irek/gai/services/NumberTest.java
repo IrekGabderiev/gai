@@ -6,7 +6,7 @@ public class NumberTest {
     private final Number number = new Number();
 
     @org.junit.Before
-    public void setUp() throws Exception {
+    public void setUp() {
         number.setNumericalValues(777);
         number.setLiteralValues(new int[]{0,1,2});
     }

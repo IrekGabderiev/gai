@@ -1,5 +1,7 @@
 package com.irek.gai;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,6 +10,8 @@ public class GaiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GaiApplication.class, args);
+        Logger logger = LoggerFactory.getLogger(GaiApplication.class);
+        logger.info("Application is started");
     }
 
 }

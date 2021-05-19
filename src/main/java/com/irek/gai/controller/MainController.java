@@ -14,11 +14,15 @@ public class MainController {
 
     @GetMapping("/random")
     public String random(){
-        return number.randomNumber();
+        synchronized (number){
+            return number.randomNumber();
+        }
     }
 
     @GetMapping("/next")
     public String next(){
-        return number.nextNumber();
+        synchronized (number) {
+            return number.nextNumber();
+        }
     }
 }
